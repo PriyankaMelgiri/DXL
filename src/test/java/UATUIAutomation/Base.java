@@ -39,7 +39,6 @@ public class Base {
 		  driverObject=new FirefoxDriver();
 	  }
 	  
-	 
 	  wait=new WebDriverWait(driverObject,Duration.ofSeconds(20));
 	  action=new Actions(driverObject);
 	  driverObject.manage().window().maximize();
