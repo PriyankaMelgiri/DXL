@@ -42,5 +42,30 @@ public class helperClass extends DriverInitiator{
 		return element;
 	}
 	
-	
+	public List<WebElement> getElements(String locator,String locatorType) {
+		
+		List<WebElement> element = null;
+		By Locator=null;
+		switch(locatorType) {
+		case "xpath":
+			Locator=By.xpath(locator);
+			wait.until(ExpectedConditions.or(
+	                ExpectedConditions.presenceOfElementLocated(Locator),
+	                ExpectedConditions.elementToBeClickable(Locator)
+	            ));
+		element=DriverInitiator.driverObject.findElements(Locator);
+		break;
+		
+		case "id":
+			Locator=By.id(locator);
+			wait.until(ExpectedConditions.or(
+	                ExpectedConditions.presenceOfElementLocated(Locator),
+	                ExpectedConditions.elementToBeClickable(Locator)
+	            ));
+			element=DriverInitiator.driverObject.findElements(Locator);
+			break;
+			
+		}
+		return element;
+	}
 }
