@@ -1,5 +1,7 @@
 package UATUIAutomation.Locators;
 
+import java.util.List;
+
 import org.openqa.selenium.WebElement;
 
 import UATUIAutomation.helperClass;

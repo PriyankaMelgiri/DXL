@@ -5,6 +5,18 @@
     <parameter name="browser" value="chrome"/>
     <parameter name="URL" value="https://uat.cofe.dxl.com/"/>
     <classes>
+      <class name="UATUIAutomation.TestPages.HomePageTest">
+        <methods>
+          <include name="countrySelector"/>
+        </methods>
+      </class> <!-- UATUIAutomation.TestPages.HomePageTest -->
+      <class name="UATUIAutomation.TestPages.CookieInternationalPOPUP">
+        <methods>
+          <include name="tearDown"/>
+          <include name="launchsite"/>
+          <include name="cookieCloseIcon"/>
+        </methods>
+      </class> <!-- UATUIAutomation.TestPages.CookieInternationalPOPUP -->
       <class name="UATUIAutomation.TestPages.ShirtPLPPageTest">
         <methods>
           <include name="producNameLink"/>
